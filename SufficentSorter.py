@@ -11,12 +11,12 @@ def createArray(size,minN,maxN):
 
 array = createArray(arraySize, limitMin, limitMax)
 print("Unsorted:",array)
-array.sort()
+array = array = sorted(set(array),reverse=True)
 print("Sorted:",array)
 
 def testMe(array):
     for i in range (arraySize-1):
-        if array[i]>array[i+1]:
+        if array[i]<=array[i+1]:
             print("error at position",i)
 
 testMe(array)
